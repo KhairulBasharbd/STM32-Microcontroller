@@ -14,6 +14,10 @@ int main(void){
 	RCC->AHB1ENR |= GPIOCEN;
 	
 	//Enabling port A as output and C as input mode 
+
+	
+	
+	
 	GPIOA->MODER |= 1U<<10;
 	GPIOA->MODER &= ~(1U<<11);
 	
@@ -25,11 +29,12 @@ int main(void){
 		
 		if(GPIOC->IDR & PIN13){
 			//turn on LED
-			GPIOA->BSRR |= 1U<<21;
+			GPIOA->BSRR |= (1U<<5);
 		}
 		else{
 			////turn off LED
-			GPIOA->BSRR |= (1U<<5);
+			
+			GPIOA->BSRR |= 1U<<21;
 		}
 	
 	}

@@ -1,6 +1,8 @@
 #include<stm32f446xx.h>
 
 
+
+
 int main(void){
 
 	RCC->AHB1ENR |= 1U<<0;
@@ -14,7 +16,7 @@ int main(void){
 		for(int i=0;i<1000000;i++){}
 		
 		GPIOA->BSRR |= (1U<<21);
-		for(int i=0;i<100000;i++){}
+		for(int i=0;i<1000000;i++){}
 	
 	}
 
