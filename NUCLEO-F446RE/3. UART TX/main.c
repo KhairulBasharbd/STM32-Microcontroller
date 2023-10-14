@@ -73,9 +73,6 @@ void uart2_tx_init(void){
 	RCC->APB1ENR |= UART2EN;
 	
 	//configure baudrate
-	//uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
-	
-	
 	
 	USART2->BRR = (uint16_t)(APB1_CLK / UART_BAUDRATE);
 	
