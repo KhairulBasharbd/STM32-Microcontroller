@@ -12,9 +12,9 @@ int main(void){
 	
 	while(1){
 		
-		//uart2_write('z');
+		uart2_write('z');
 		
-		printf("Hello \n\r");
+		//printf("Hello \n\r");
 		
 		for(int i=0;i<1000000;i++){}
 			

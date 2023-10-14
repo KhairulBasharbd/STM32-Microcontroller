@@ -9,15 +9,15 @@
 #define CR1_UE (1U<<13)
 #define SR_TXE (1U<<7)
 
-#define SYS_FREQ 45000000
+#define SYS_FREQ 16000000
 #define APB1_CLK SYS_FREQ
 
-#define UART_BAUDRATE 115200
+#define UART_BAUDRATE 9600
 
 void uart2_tx_init(void);
 void uart2_write(uint8_t ch);
-static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate);
-static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
+//static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate);
+//static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate);
 
 
 
@@ -28,8 +28,8 @@ int main(void){
 	
 	while(1){
 		
-		uart2_write('z');
-		for(int i=0;i<1000000;i++){}
+		uart2_write('K') ;
+		for(int i=0;i<100000;i++){}
 	}
 
 }
@@ -73,7 +73,11 @@ void uart2_tx_init(void){
 	RCC->APB1ENR |= UART2EN;
 	
 	//configure baudrate
-	uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+	//uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+	
+	
+	
+	USART2->BRR = (uint16_t)(APB1_CLK / UART_BAUDRATE);
 	
 	//configure data transfer direction
 	USART2->CR1 |=CR1_TE;
@@ -83,11 +87,12 @@ void uart2_tx_init(void){
 	
 }
 
-
+/*
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t BaudRate){
 	
 	USARTx->BRR = compute_uart_bd(PeriphClk, BaudRate);
+	
 
 }
 
@@ -104,6 +109,6 @@ static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t BaudRate){
 	
 }
 
-
+*/
 
 
