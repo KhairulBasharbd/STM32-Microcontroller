@@ -1,10 +1,8 @@
 # STM32-Microcontroller
 
-# STM32 Microcontroller Project README
-
 ## Introduction
 
-Briefly introduce your STM32 microcontroller project. Explain its purpose, main features, and any specific hardware or peripherals you are using.
+The STM32 microcontroller family is a series of popular and versatile microcontrollers developed by STMicroelectronics. These microcontrollers are based on the ARM Cortex-M processor cores and are widely used in various embedded systems and IoT (Internet of Things) applications.
 
 ## Table of Contents
 
