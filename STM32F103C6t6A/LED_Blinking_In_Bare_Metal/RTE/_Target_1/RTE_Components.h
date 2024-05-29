@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'led_blinking' 
+ * Project: 'LED_Blinking_In_Bare_Metal' 
  * Target:  'Target 1' 
  */
 
@@ -14,10 +14,8 @@
 /*
  * Define the Device Header File: 
  */
-#define CMSIS_device_header "stm32f4xx.h"
+#define CMSIS_device_header "stm32f10x.h"
 
-/* Keil::Device:Startup@2.6.3 */
-#define RTE_DEVICE_STARTUP_STM32F4XX    /* Device Startup for STM32F4 */
 
 
 #endif /* RTE_COMPONENTS_H */
