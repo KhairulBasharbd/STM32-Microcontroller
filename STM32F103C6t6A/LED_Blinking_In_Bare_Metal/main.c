@@ -19,7 +19,7 @@ int main(void){
 	GPIOB->CRH |=(1U<<16);
 	GPIOB->CRH |=(1U<<17);
 	//Open drain conf for PB12
-	GPIOB->CRH |=(1U<<18);
+	GPIOB->CRH &=~(1U<<18);
 	GPIOB->CRH &=~(1U<<19);
 
 	while(1){
