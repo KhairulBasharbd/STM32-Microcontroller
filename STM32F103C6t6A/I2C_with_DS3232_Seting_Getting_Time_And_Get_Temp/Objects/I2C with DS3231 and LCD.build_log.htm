@@ -1,0 +1,412 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Khairul Basar, Rajshahi University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.9.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Khairul_Bashar\Desktop\Embeded System\All project\STM32F103C6t6A\I2C_with_DS3232\I2C with DS3231 and LCD.uvprojx
+Project File Date:  09/25/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+i2c-lcd.c(4): warning: In file included from...
+./i2c-lcd.h(1): error: 'stm32f1xx_hal.h' file not found
+    1 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+compiling i2c-lcd.c...
+stm32f1xx_hal_msp.c(23): warning: In file included from...
+./main.h(31): error: 'stm32f1xx_hal.h' file not found
+   31 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+compiling stm32f1xx_hal_msp.c...
+main.c(22): error: 'stm32f1xx.h' file not found
+   22 | #include "stm32f1xx.h"                  // Device header
+      |          ^~~~~~~~~~~~~
+1 error generated.
+compiling main.c...
+syscalls.c(50): error: 'sys/stat.h' file not found
+   50 | #include <sys/stat.h>
+      |          ^~~~~~~~~~~~
+1 error generated.
+compiling syscalls.c...
+stm32f1xx_it.c(22): warning: In file included from...
+./main.h(31): error: 'stm32f1xx_hal.h' file not found
+   31 | #include "stm32f1xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+compiling stm32f1xx_it.c...
+sysmem.c(54): warning: redundant parentheses surrounding declarator [-Wredundant-parens]
+   54 | extern int errno;
+      |            ^~~~~
+D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin\..\include\errno.h(47): note: expanded from macro 'errno'
+   47 | #define errno (*__CLIBNS __aeabi_errno_addr())
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sysmem.c(54): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin\..\include\errno.h(47): note: expanded from macro 'errno'
+   47 | #define errno (*__CLIBNS __aeabi_errno_addr())
+      |                                            ^
+sysmem.c(54): error: conflicting types for '__aeabi_errno_addr'
+D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin\..\include\errno.h(47): note: expanded from macro 'errno'
+   47 | #define errno (*__CLIBNS __aeabi_errno_addr())
+      |                          ^
+D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin\..\include\errno.h(32): note: previous declaration is here
+   32 | extern _ARMABI_PURE volatile int *__aeabi_errno_addr(void);
+      |                                   ^
+sysmem.c(55): error: illegal storage class on file-scoped variable
+   55 | register char * stack_ptr asm("sp");
+      |                 ^
+sysmem.c(55): error: expected ';' after top level declarator
+   55 | register char * stack_ptr asm("sp");
+      |                          ^
+      |                          ;
+sysmem.c(63): error: unknown type name 'caddr_t'
+   63 | caddr_t _sbrk(int incr)
+      | ^
+sysmem.c(65): error: expected ';' at end of declaration
+   65 |         extern char end asm("end");
+      |                        ^
+      |                        ;
+sysmem.c(76): error: use of undeclared identifier 'caddr_t'
+   76 |                 return (caddr_t) -1;
+      |                         ^
+sysmem.c(81): error: use of undeclared identifier 'caddr_t'
+   81 |         return (caddr_t) prev_heap_end;
+      |                 ^
+2 warnings and 7 errors generated.
+compiling sysmem.c...
+system_stm32f1xx.c(59): error: 'stm32f1xx.h' file not found
+   59 | #include "stm32f1xx.h"
+      |          ^~~~~~~~~~~~~
+1 error generated.
+compiling system_stm32f1xx.c...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(53): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.h(33): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(53): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.h(34): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(246): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  246 |   return (GPIOx->IDR);
+      |   ~~~~~~  ~~~~~~~^~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(53): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.h(35): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.h(146): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  146 |   DMA_Channel->CCR &= ~DMA_CHANNEL_EN;
+      |                    ~~ ^~~~~~~~~~~~~~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(53): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.h(46): error: "I2C not configured in RTE_Device.h!"
+   46 |   #error "I2C not configured in RTE_Device.h!"
+      |    ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.h(167): warning: padding size of 'struct _I2C_TRANSFER_INFO' with 1 byte to alignment boundary [-Wpadded]
+  167 | typedef struct _I2C_TRANSFER_INFO {
+      |                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.h(177): warning: padding size of 'struct _I2C_INFO' with 3 bytes to alignment boundary [-Wpadded]
+  177 | typedef struct _I2C_INFO {
+      |                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(394): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+  394 |   i2c->info->xfer.data = (uint8_t *)data;
+      |                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(537): warning: cast from 'const unsigned char *' to 'unsigned char *' drops const qualifier [-Wcast-qual]
+  537 |   i2c->info->xfer.data = (uint8_t *)data;
+      |                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(704): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  704 |       i2c->reg->CCR    =  ccr;
+      |                        ~  ^~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(705): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  705 |       i2c->reg->TRISE  =  trise;
+      |                        ~  ^~~~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/I2C_STM32F10x.c(852): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  852 |       data  = (uint8_t)tr->addr << 1;
+      |             ~ ~~~~~~~~~~~~~~~~~~^~~~
+12 warnings and 1 error generated.
+compiling I2C_STM32F10x.c...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(30): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(246): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  246 |   return (GPIOx->IDR);
+      |   ~~~~~~  ~~~~~~~^~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(128): warning: integer constant not in range of enumerated type 'GPIO_CONF' [-Wassign-enum]
+  128 |       conf &= ~1;
+      |               ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(140): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  140 |   *reg &= ~(0xF << (num << 2));
+      |        ~~ ^~~~~~~~~~~~~~~~~~~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(141): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  141 |   *reg |= ((conf << 2) | mode) << (num << 2);
+      |        ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+7 warnings generated.
+compiling GPIO_STM32F10x.c...
+RTE/Device/STM32F103C6/system_stm32f10x.c(64): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+RTE/Device/STM32F103C6/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103C6/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103C6/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+5 warnings generated.
+compiling system_stm32f10x.c...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(37): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.h(31): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(37): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.h(146): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  146 |   DMA_Channel->CCR &= ~DMA_CHANNEL_EN;
+      |                    ~~ ^~~~~~~~~~~~~~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(233): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  233 |         RCC->AHBENR &= ~RCC_AHBENR_DMA1EN;
+      |                     ~~ ^~~~~~~~~~~~~~~~~~
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(301): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  301 | __WEAK void DMA1_Channel1_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(301): warning: unused parameter 'event' [-Wunused-parameter]
+  301 | __WEAK void DMA1_Channel1_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(301): warning: no previous prototype for function 'DMA1_Channel1_Event' [-Wmissing-prototypes]
+  301 | __WEAK void DMA1_Channel1_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(301): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  301 | __WEAK void DMA1_Channel1_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  302 | __WEAK void DMA1_Channel2_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(302): warning: unused parameter 'event' [-Wunused-parameter]
+  302 | __WEAK void DMA1_Channel2_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(302): warning: no previous prototype for function 'DMA1_Channel2_Event' [-Wmissing-prototypes]
+  302 | __WEAK void DMA1_Channel2_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(302): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  302 | __WEAK void DMA1_Channel2_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  303 | __WEAK void DMA1_Channel3_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(303): warning: unused parameter 'event' [-Wunused-parameter]
+  303 | __WEAK void DMA1_Channel3_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(303): warning: no previous prototype for function 'DMA1_Channel3_Event' [-Wmissing-prototypes]
+  303 | __WEAK void DMA1_Channel3_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(303): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  303 | __WEAK void DMA1_Channel3_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(304): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  304 | __WEAK void DMA1_Channel4_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(304): warning: unused parameter 'event' [-Wunused-parameter]
+  304 | __WEAK void DMA1_Channel4_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(304): warning: no previous prototype for function 'DMA1_Channel4_Event' [-Wmissing-prototypes]
+  304 | __WEAK void DMA1_Channel4_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(304): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  304 | __WEAK void DMA1_Channel4_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(305): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  305 | __WEAK void DMA1_Channel5_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(305): warning: unused parameter 'event' [-Wunused-parameter]
+  305 | __WEAK void DMA1_Channel5_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(305): warning: no previous prototype for function 'DMA1_Channel5_Event' [-Wmissing-prototypes]
+  305 | __WEAK void DMA1_Channel5_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(305): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  305 | __WEAK void DMA1_Channel5_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(306): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  306 | __WEAK void DMA1_Channel6_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(306): warning: unused parameter 'event' [-Wunused-parameter]
+  306 | __WEAK void DMA1_Channel6_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(306): warning: no previous prototype for function 'DMA1_Channel6_Event' [-Wmissing-prototypes]
+  306 | __WEAK void DMA1_Channel6_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(306): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  306 | __WEAK void DMA1_Channel6_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(307): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+  307 | __WEAK void DMA1_Channel7_Event (uint32_t event) {;}
+      |                                                   ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(307): warning: unused parameter 'event' [-Wunused-parameter]
+  307 | __WEAK void DMA1_Channel7_Event (uint32_t event) {;}
+      |                                           ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(307): warning: no previous prototype for function 'DMA1_Channel7_Event' [-Wmissing-prototypes]
+  307 | __WEAK void DMA1_Channel7_Event (uint32_t event) {;}
+      |             ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(307): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  307 | __WEAK void DMA1_Channel7_Event (uint32_t event) {;}
+      |        ^
+      |        static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(323): warning: no previous prototype for function 'DMA1_Channel1_IRQHandler' [-Wmissing-prototypes]
+  323 | void DMA1_Channel1_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(323): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  323 | void DMA1_Channel1_IRQHandler (void) {
+      | ^
+      | static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(335): warning: no previous prototype for function 'DMA1_Channel2_IRQHandler' [-Wmissing-prototypes]
+  335 | void DMA1_Channel2_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(335): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  335 | void DMA1_Channel2_IRQHandler (void) {
+      | ^
+      | static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(347): warning: no previous prototype for function 'DMA1_Channel3_IRQHandler' [-Wmissing-prototypes]
+  347 | void DMA1_Channel3_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(347): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  347 | void DMA1_Channel3_IRQHandler (void) {
+      | ^
+      | static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(359): warning: no previous prototype for function 'DMA1_Channel4_IRQHandler' [-Wmissing-prototypes]
+  359 | void DMA1_Channel4_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(359): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  359 | void DMA1_Channel4_IRQHandler (void) {
+      | ^
+      | static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(371): warning: no previous prototype for function 'DMA1_Channel5_IRQHandler' [-Wmissing-prototypes]
+  371 | void DMA1_Channel5_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(371): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  371 | void DMA1_Channel5_IRQHandler (void) {
+      | ^
+      | static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(383): warning: no previous prototype for function 'DMA1_Channel6_IRQHandler' [-Wmissing-prototypes]
+  383 | void DMA1_Channel6_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(383): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  383 | void DMA1_Channel6_IRQHandler (void) {
+      | ^
+      | static 
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(395): warning: no previous prototype for function 'DMA1_Channel7_IRQHandler' [-Wmissing-prototypes]
+  395 | void DMA1_Channel7_IRQHandler (void) {
+      |      ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/DMA_STM32F10x.c(395): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  395 | void DMA1_Channel7_IRQHandler (void) {
+      | ^
+      | static 
+33 warnings generated.
+compiling DMA_STM32F10x.c...
+".\Objects\I2C with DS3231 and LCD.axf" - 14 Error(s), 59 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: I2C Version: 2.4.0
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: I2C Version: 2.2
+   * Component: DMA Version: 1.3
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C6
+  ./RTE/_Target_1
+  D:/Installed_software/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  D:/Installed_software/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Driver/Include
+  D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS Driver:I2C(API)@2.4.0
+      Include file:  CMSIS/Driver/Include/Driver_I2C.h
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::CMSIS Driver:I2C@2.2
+      Source file:   RTE_Driver/I2C_STM32F10x.c
+
+   * Component: Keil::Device:DMA@1.3
+      Source file:   RTE_Driver/DMA_STM32F10x.c
+      Include file:  RTE_Driver/DMA_STM32F10x.h
+
+   * Component: Keil::Device:GPIO@1.3
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_ld.s
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Target not created.
+Build Time Elapsed:  00:00:13
+</pre>
+</body>
+</html>
