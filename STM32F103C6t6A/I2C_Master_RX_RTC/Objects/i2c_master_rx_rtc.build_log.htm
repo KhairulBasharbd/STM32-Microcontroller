@@ -1,0 +1,144 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Khairul Basar, Rajshahi University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Khairul_Bashar\Desktop\Embeded System\All project\STM32F103C6t6A\I2C_Master_RX_RTC\i2c_master_rx_rtc.uvprojx
+Project File Date:  06/04/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+assembling startup_stm32f10x_ld.s...
+main.c(1): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+main.c(3): warning: // comments are not allowed in this language [-Wcomment]
+    3 | #define I2C_ADDRESS_DS3231   0x68  // I2C address for DS3231 RTC module
+      |                                    ^
+main.c(5): warning: no previous prototype for function 'I2C_Init' [-Wmissing-prototypes]
+    5 | void I2C_Init(void) {
+      |      ^
+main.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    5 | void I2C_Init(void) {
+      | ^
+      | static 
+main.c(65): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+   65 |     I2C1->DR = (deviceAddr << 1) | 0x01;
+      |              ~ ~~~~~~~~~~~~~~~~~~^~~~~~
+main.c(78): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+   78 |     data = I2C1->DR;
+      |          ~ ~~~~~~^~
+main.c(30): warning: no previous prototype for function 'I2C_ReadRegister' [-Wmissing-prototypes]
+   30 | uint8_t I2C_ReadRegister(uint8_t deviceAddr, uint8_t regAddr) {
+      |         ^
+main.c(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   30 | uint8_t I2C_ReadRegister(uint8_t deviceAddr, uint8_t regAddr) {
+      | ^
+      | static 
+main.c(86): warning: no previous prototype for function 'BCD_to_Decimal' [-Wmissing-prototypes]
+   86 | uint8_t BCD_to_Decimal(uint8_t bcd) {
+      |         ^
+main.c(86): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   86 | uint8_t BCD_to_Decimal(uint8_t bcd) {
+      | ^
+      | static 
+main.c(90): warning: no previous prototype for function 'read_DS3231_time' [-Wmissing-prototypes]
+   90 | void read_DS3231_time(uint8_t* hours, uint8_t* minutes, uint8_t* seconds) {
+      |      ^
+main.c(90): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   90 | void read_DS3231_time(uint8_t* hours, uint8_t* minutes, uint8_t* seconds) {
+      | ^
+      | static 
+main.c(109): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  109 |         for (volatile int i = 0; i < 1000000; i++); // Simple delay
+      |              ^
+main.c(109): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(103): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+  103 |     uint8_t hours, minutes, seconds;
+      |             ^
+13 warnings generated.
+compiling main.c...
+RTE/Device/STM32F103C6/system_stm32f10x.c(64): warning: In file included from...
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+RTE/Device/STM32F103C6/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103C6/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103C6/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+5 warnings generated.
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=1436 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\i2c_master_rx_rtc.axf" - 0 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C6
+  ./RTE/_Target_1
+  D:/Installed_software/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  D:/Installed_software/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_ld.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
