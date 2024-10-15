@@ -1,0 +1,196 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Khairul Basar, Rajshahi University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Khairul_Bashar\Desktop\Embeded System\All project\NUCLEO-F446RE\I2C_Rx_Register_RTC\i2c_rx_rtc.uvprojx
+Project File Date:  10/15/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'D:\Installed_software\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+main.c(3): warning: In file included from...
+./set.h(10): warning: no newline at end of file [-Wnewline-eof]
+   10 |         
+      |         ^
+main.c(8): warning: no previous prototype for function 'I2C_Init' [-Wmissing-prototypes]
+    8 | void I2C_Init(void) {
+      |      ^
+main.c(8): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    8 | void I2C_Init(void) {
+      | ^
+      | static 
+main.c(44): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   44 |     uint8_t hours, minutes, seconds;
+      |             ^
+main.c(18): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   18 |     GPIOB->AFR[1] |= (4 << GPIO_AFRH_AFSEL8_Pos) | (4 << GPIO_AFRH_AFSEL9_Pos); // AF4 for I2C1
+      |     ^~~~~~~~~~
+D:/Installed_software/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h(1122): note: expanded from macro 'GPIOB'
+ 1122 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+4 warnings generated.
+compiling main.c...
+set.c(2): warning: In file included from...
+./set.h(10): warning: no newline at end of file [-Wnewline-eof]
+   10 |         
+      |         ^
+set.c(5): warning: no previous prototype for function 'I2C1_Write' [-Wmissing-prototypes]
+    5 | void I2C1_Write(uint8_t address, uint8_t reg, uint8_t *data, uint8_t size) {
+      |      ^
+set.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    5 | void I2C1_Write(uint8_t address, uint8_t reg, uint8_t *data, uint8_t size) {
+      | ^
+      | static 
+set.c(30): warning: no previous prototype for function 'decToBcd' [-Wmissing-prototypes]
+   30 | uint8_t decToBcd(int val) {
+      |         ^
+set.c(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   30 | uint8_t decToBcd(int val) {
+      | ^
+      | static 
+set.c(21): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   21 |         I2C1->DR = data[i];
+      |                    ^~~~
+set.c(38): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   38 |     set_time[1] = decToBcd(min);
+      |     ^~~~~~~~
+set.c(39): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   39 |     set_time[2] = decToBcd(hour);
+      |     ^~~~~~~~
+set.c(40): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   40 |     set_time[3] = decToBcd(dow);
+      |     ^~~~~~~~
+set.c(41): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   41 |     set_time[4] = decToBcd(dom);
+      |     ^~~~~~~~
+set.c(42): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   42 |     set_time[5] = decToBcd(month);
+      |     ^~~~~~~~
+set.c(43): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   43 |     set_time[6] = decToBcd(year);
+      |     ^~~~~~~~
+10 warnings generated.
+compiling set.c...
+i2c-lcd.c(79): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+   79 |     lcd_send_cmd(col);
+      |     ~~~~~~~~~~~~ ^~~
+i2c-lcd.c(24): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   24 |         I2C1->DR = data[i];
+      |                    ^~~~
+i2c-lcd.c(45): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   45 |     data_t[1] = data_u | 0x08;  // en=0, rs=0
+      |     ^~~~~~
+i2c-lcd.c(46): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   46 |     data_t[2] = data_l | 0x0C;  // en=1, rs=0
+      |     ^~~~~~
+i2c-lcd.c(47): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   47 |     data_t[3] = data_l | 0x08;  // en=0, rs=0
+      |     ^~~~~~
+i2c-lcd.c(57): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   57 |     data_t[1] = data_u | 0x09;  // en=0, rs=1
+      |     ^~~~~~
+i2c-lcd.c(58): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   58 |     data_t[2] = data_l | 0x0D;  // en=1, rs=1
+      |     ^~~~~~
+i2c-lcd.c(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |     data_t[3] = data_l | 0x09;  // en=0, rs=1
+      |     ^~~~~~
+i2c-lcd.c(108): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  108 |         lcd_send_data(*str++);
+      |                        ^~~
+9 warnings generated.
+compiling i2c-lcd.c...
+gettime.c(42): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   42 |     I2C1->DR = (deviceAddr << 1) | 0x01;
+      |              ~ ~~~~~~~~~~~~~~~~~~^~~~~~
+gettime.c(55): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+   55 |     data = I2C1->DR;
+      |          ~ ~~~~~~^~
+gettime.c(7): warning: no previous prototype for function 'I2C_ReadRegister' [-Wmissing-prototypes]
+    7 | uint8_t I2C_ReadRegister(uint8_t deviceAddr, uint8_t regAddr) {
+      |         ^
+gettime.c(7): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    7 | uint8_t I2C_ReadRegister(uint8_t deviceAddr, uint8_t regAddr) {
+      | ^
+      | static 
+gettime.c(63): warning: no previous prototype for function 'BCD_to_Decimal' [-Wmissing-prototypes]
+   63 | uint8_t BCD_to_Decimal(uint8_t bcd) {
+      |         ^
+gettime.c(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   63 | uint8_t BCD_to_Decimal(uint8_t bcd) {
+      | ^
+      | static 
+gettime.c(75): warning: no newline at end of file [-Wnewline-eof]
+   75 | }
+      |  ^
+gettime.c(67): warning: no previous prototype for function 'read_DS3231_time' [-Wmissing-prototypes]
+   67 | void read_DS3231_time(uint8_t* hours, uint8_t* minutes, uint8_t* seconds) {
+      |      ^
+gettime.c(67): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   67 | void read_DS3231_time(uint8_t* hours, uint8_t* minutes, uint8_t* seconds) {
+      | ^
+      | static 
+6 warnings generated.
+compiling gettime.c...
+assembling startup_stm32f446xx.s...
+RTE/Device/STM32F446RETx/system_stm32f4xx.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=7648 RO-data=1036 RW-data=0 ZI-data=1632  
+".\Objects\i2c_rx_rtc.axf" - 0 Error(s), 30 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  D:/Installed_software/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  D:/Installed_software/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>

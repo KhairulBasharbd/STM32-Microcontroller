@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"i2c_ds3231_on_stm32f103c6t6a\startup_stm32f103x6.o"
+"i2c_ds3231_on_stm32f103c6t6a\main.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_it.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_msp.o"
+"i2c_ds3231_on_stm32f103c6t6a\i2c-lcd.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_gpio_ex.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_i2c.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_rcc.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_rcc_ex.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_gpio.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_dma.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_cortex.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_pwr.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_flash.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_flash_ex.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_exti.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_tim.o"
+"i2c_ds3231_on_stm32f103c6t6a\stm32f1xx_hal_tim_ex.o"
+"i2c_ds3231_on_stm32f103c6t6a\system_stm32f1xx.o"
+--strict --scatter "I2C_DS3231_On_STM32F103C6T6A\I2C_DS3231_On_STM32F103C6T6A.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "I2C_DS3231_On_STM32F103C6T6A.map" -o I2C_DS3231_On_STM32F103C6T6A\I2C_DS3231_On_STM32F103C6T6A.axf
